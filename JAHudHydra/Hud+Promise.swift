@@ -80,5 +80,13 @@ public extension Hud {
 			})
 		})
 	}
+  
+  public static func asynDismiss(from parent: UIViewController) -> Promise<Void> {
+    return Promise<Void>(in: .main, { (fulfill, fail, _) in
+      Hud.dismiss(from: parent, then: {
+        fulfill(())
+      })
+    })
+  }
 	
 }
