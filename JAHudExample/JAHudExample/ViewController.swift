@@ -35,17 +35,24 @@ class ViewController: UIViewController {
 			Thread.sleep(forTimeInterval: 1.0)
 		}.defer(in: .userInitiated, 1.0).then(in: .main) { () -> Promise<Void> in
 			if fail {
-				return Hud.asyncPresentFailure(on: self)
+				return Hud.asyncPresentFailure(on: self).then(in: .main, { () in
+					return Hud.asynDismiss(from: self)
+				})
 			} else {
-				return Hud.asyncPresentSuccess(on: self)
+				return Hud.asyncPresentSuccess(on: self).then(in: .main, { () in
+					self.performSegue(withIdentifier: "After", sender: self)
+				}).then(in: .main, { () in
+					return Hud.asynDismiss(from: self)
+				})
 			}
-		}.then(in: .main) { () in
-			if !fail {
-				self.performSegue(withIdentifier: "After", sender: self)
-			}
-		}.always(in: .main) {
-			Hud.dismiss(from: self)
 		}
+//			.then(in: .main) { () in
+//			if !fail {
+//				self.performSegue(withIdentifier: "After", sender: self)
+//			}
+//		}.always(in: .main) {
+//			Hud.dismiss(from: self)
+//		}
 		
 		// This is the original example code from JAHud for comparision
 //		Hud.presentProgress(on: self,
