@@ -9,6 +9,128 @@ import Foundation
 import JAHud
 import Hydra
 
+public extension Promise {
+	@discardableResult
+	public func thenPresentWaitHud(on parent: UIViewController,
+													title: String? = nil,
+													text: String? = nil,
+													presentationStyle: Hud.PresentationStyle = .overCurrentContext,
+													configuration: Hud.Configuration? = nil) -> Promise<Void> {
+		return Hud.asyncPresentWait(on: parent,
+																title: title,
+																text: text,
+																presentationStyle: presentationStyle,
+																configuration: configuration)
+	}
+
+	@discardableResult
+	public func thenPresentProgressHud(on parent: UIViewController,
+															progress: Progress,
+															title: String? = nil,
+															text: String? = nil,
+															presentationStyle: Hud.PresentationStyle = .overCurrentContext,
+															configuration: Hud.Configuration? = nil) -> Promise<Void> {
+		return Hud.asyncPresentProgress(on: parent,
+																		progress: progress,
+																		title: title,
+																		text: text,
+																		presentationStyle: presentationStyle,
+																		configuration: configuration)
+	}
+	
+	@discardableResult
+	public func thenPresentSuccessHud(on parent: UIViewController,
+																				title: String? = nil,
+																				text: String? = nil,
+																				presentationStyle: Hud.PresentationStyle = .overCurrentContext,
+																				configuration: Hud.Configuration? = nil) -> Promise<Void> {
+		return Hud.asyncPresentSuccess(on: parent,
+																	 title: title,
+																	 text: text,
+																	 presentationStyle: presentationStyle,
+																	 configuration: configuration)
+	}
+	
+	@discardableResult
+	public func thenPresentFailureHud(on parent: UIViewController,
+																 title: String? = nil,
+																 text: String? = nil,
+																 presentationStyle: Hud.PresentationStyle = .overCurrentContext,
+																 configuration: Hud.Configuration? = nil) -> Promise<Void> {
+		return Hud.asyncPresentFailure(on: parent,
+																	 title: title,
+																	 text: text,
+																	 presentationStyle: presentationStyle,
+																	 configuration: configuration)
+	}
+	
+	@discardableResult
+	public func thenDismissHud(from parent: UIViewController) -> Promise<Void> {
+		return Hud.asynDismiss(from: parent)
+	}
+}
+
+public extension Promise {
+	public static func presentWaitHud(on parent: UIViewController,
+																		title: String? = nil,
+																		text: String? = nil,
+																		presentationStyle: Hud.PresentationStyle = .overCurrentContext,
+																		configuration: Hud.Configuration? = nil) -> Promise<Void> {
+		return Hud.asyncPresentWait(on: parent,
+																title: title,
+																text: text,
+																presentationStyle: presentationStyle,
+																configuration: configuration)
+	}
+	
+	@discardableResult
+	public static func presentProgressHud(on parent: UIViewController,
+															progress: Progress,
+															title: String? = nil,
+															text: String? = nil,
+															presentationStyle: Hud.PresentationStyle = .overCurrentContext,
+															configuration: Hud.Configuration? = nil) -> Promise<Void> {
+		return Hud.asyncPresentProgress(on: parent,
+																		progress: progress,
+																		title: title,
+																		text: text,
+																		presentationStyle: presentationStyle,
+																		configuration: configuration)
+	}
+	
+	@discardableResult
+	public static func presentSuccessHud(on parent: UIViewController,
+																		title: String? = nil,
+																		text: String? = nil,
+																		presentationStyle: Hud.PresentationStyle = .overCurrentContext,
+																		configuration: Hud.Configuration? = nil) -> Promise<Void> {
+		return Hud.asyncPresentSuccess(on: parent,
+																	 title: title,
+																	 text: text,
+																	 presentationStyle: presentationStyle,
+																	 configuration: configuration)
+	}
+	
+	@discardableResult
+	public static func presentFailureHud(on parent: UIViewController,
+																		title: String? = nil,
+																		text: String? = nil,
+																		presentationStyle: Hud.PresentationStyle = .overCurrentContext,
+																		configuration: Hud.Configuration? = nil) -> Promise<Void> {
+		return Hud.asyncPresentFailure(on: parent,
+																	 title: title,
+																	 text: text,
+																	 presentationStyle: presentationStyle,
+																	 configuration: configuration)
+	}
+	
+	@discardableResult
+	public static func dismissHud(from parent: UIViewController) -> Promise<Void> {
+		return Hud.asynDismiss(from: parent)
+	}
+
+}
+
 public extension Hud {
 	
 	public static func asyncPresentWait(on parent: UIViewController,
