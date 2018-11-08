@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7029B8EB21941F170082717D /* Promise+WaitHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7029B8EA21941F170082717D /* Promise+WaitHud.swift */; };
+		7029B8ED21941FF50082717D /* Promise+ProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7029B8EC21941FF50082717D /* Promise+ProgressHud.swift */; };
+		7029B8EF219420BC0082717D /* Promise+SuccessHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7029B8EE219420BC0082717D /* Promise+SuccessHud.swift */; };
+		7029B8F1219427140082717D /* Promise+FailureHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7029B8F0219427140082717D /* Promise+FailureHud.swift */; };
 		70A73F80214495DE009F96DD /* JAHudHydra.h in Headers */ = {isa = PBXBuildFile; fileRef = 70A73F7E214495DE009F96DD /* JAHudHydra.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70A73F8A21449757009F96DD /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A73F8721449757009F96DD /* Hydra.framework */; };
 		70A73F8B21449757009F96DD /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A73F8821449757009F96DD /* PureLayout.framework */; };
 		70A73F8C21449757009F96DD /* JAHud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A73F8921449757009F96DD /* JAHud.framework */; };
-		70A73F8E21449771009F96DD /* Hud+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A73F8D21449771009F96DD /* Hud+Promise.swift */; };
+		70A73F8E21449771009F96DD /* Promise+Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A73F8D21449771009F96DD /* Promise+Hud.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7029B8EA21941F170082717D /* Promise+WaitHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+WaitHud.swift"; sourceTree = "<group>"; };
+		7029B8EC21941FF50082717D /* Promise+ProgressHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+ProgressHud.swift"; sourceTree = "<group>"; };
+		7029B8EE219420BC0082717D /* Promise+SuccessHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+SuccessHud.swift"; sourceTree = "<group>"; };
+		7029B8F0219427140082717D /* Promise+FailureHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+FailureHud.swift"; sourceTree = "<group>"; };
 		70A73F7B214495DE009F96DD /* JAHudHydra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JAHudHydra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A73F7E214495DE009F96DD /* JAHudHydra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAHudHydra.h; sourceTree = "<group>"; };
 		70A73F7F214495DE009F96DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70A73F8721449757009F96DD /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
 		70A73F8821449757009F96DD /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/iOS/PureLayout.framework; sourceTree = "<group>"; };
 		70A73F8921449757009F96DD /* JAHud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JAHud.framework; path = Carthage/Build/iOS/JAHud.framework; sourceTree = "<group>"; };
-		70A73F8D21449771009F96DD /* Hud+Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hud+Promise.swift"; sourceTree = "<group>"; };
+		70A73F8D21449771009F96DD /* Promise+Hud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Hud.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +68,11 @@
 			children = (
 				70A73F7E214495DE009F96DD /* JAHudHydra.h */,
 				70A73F7F214495DE009F96DD /* Info.plist */,
-				70A73F8D21449771009F96DD /* Hud+Promise.swift */,
+				70A73F8D21449771009F96DD /* Promise+Hud.swift */,
+				7029B8EA21941F170082717D /* Promise+WaitHud.swift */,
+				7029B8EC21941FF50082717D /* Promise+ProgressHud.swift */,
+				7029B8EE219420BC0082717D /* Promise+SuccessHud.swift */,
+				7029B8F0219427140082717D /* Promise+FailureHud.swift */,
 			);
 			path = JAHudHydra;
 			sourceTree = "<group>";
@@ -154,7 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70A73F8E21449771009F96DD /* Hud+Promise.swift in Sources */,
+				7029B8ED21941FF50082717D /* Promise+ProgressHud.swift in Sources */,
+				70A73F8E21449771009F96DD /* Promise+Hud.swift in Sources */,
+				7029B8EB21941F170082717D /* Promise+WaitHud.swift in Sources */,
+				7029B8F1219427140082717D /* Promise+FailureHud.swift in Sources */,
+				7029B8EF219420BC0082717D /* Promise+SuccessHud.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
