@@ -81,3 +81,4 @@ Carthage/Build
 fastlane/builds
 *.cer
 devices.txt
+/JAHudHydra.framework.zip
