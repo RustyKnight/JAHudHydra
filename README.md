@@ -35,22 +35,22 @@ And turns it into something more like...
 
 ~~~
 Promise<Void>.presentProgressHud(on: self,
-																 progress: progress,
-																 title: "All your work are belong to us",
-																 text: "Please wait...",
-																 configuration: config)
-	.then(in: .userInitiated) { () in
-		while self.progress.fractionCompleted < 1.0 {
-			Thread.sleep(forTimeInterval: 1.0)
-			let amount = 10
-			let value = min(100, self.progress.completedUnitCount + Int64(amount))
-			self.progress.completedUnitCount += value
-		}
+	 progress: progress,
+	 title: "All your work are belong to us",
+	 text: "Please wait...",
+	 configuration: config)
+.then(in: .userInitiated) { () in
+	while self.progress.fractionCompleted < 1.0 {
 		Thread.sleep(forTimeInterval: 1.0)
-		guard fail else {
-			return
-		}
-		throw "Something wicked this way did come"
+		let amount = 10
+		let value = min(100, self.progress.completedUnitCount + Int64(amount))
+		self.progress.completedUnitCount += value
+	}
+	Thread.sleep(forTimeInterval: 1.0)
+	guard fail else {
+		return
+	}
+	throw "Something wicked this way did come"
 }.thenPresentSuccessHud(on: self)
 .then(in: .main, { () in
 	self.performSegue(withIdentifier: "After", sender: self)
