@@ -1,2 +1,5 @@
-github "RustyKnight/JAHud"
-github "malcommac/Hydra"
+#github "RustyKnight/JAHud"
+#github "malcommac/Hydra"
+
+binary "https://www.kiazenenterprises.org:8443/json/10.1b10B61/JAHud" ~> 0.0.9
+binary "https://www.kiazenenterprises.org:8443/json/10.1b10B61/Hydra" ~> 1.2.1

@@ -1,3 +1,2 @@
-github "PureLayout/PureLayout" "v3.1.4"
-github "RustyKnight/JAHud" "0.0.8"
-github "malcommac/Hydra" "1.2.1"
+binary "https://www.kiazenenterprises.org:8443/json/10.1b10B61/Hydra" "1.2.1"
+binary "https://www.kiazenenterprises.org:8443/json/10.1b10B61/JAHud" "0.0.9"
