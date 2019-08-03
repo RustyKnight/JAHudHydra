@@ -11,7 +11,7 @@ import Hydra
 import JAHud
 
 public extension Promise {
-	public static func presentProgressHud(on parent: UIViewController,
+	static func presentProgressHud(on parent: UIViewController,
 																				progress: Progress,
 																				title: String? = nil,
 																				text: String? = nil,

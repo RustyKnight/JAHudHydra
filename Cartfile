@@ -1,5 +1,5 @@
 #github "RustyKnight/JAHud"
 #github "malcommac/Hydra"
-binary "https://www.kiazenenterprises.org:8443/json/10.2.1b10E1001/PureLayout" ~> 3.1.4
-binary "https://www.kiazenenterprises.org:8443/json/10.2.1b10E1001/JAHud" ~> 0.0.9
-binary "https://www.kiazenenterprises.org:8443/json/10.2.1b10E1001/Hydra" ~> 1.2.1
+binary "https://www.kiazenenterprises.org:8443/json/11.0b11M382q/PureLayout" ~> 3.1.5
+binary "https://www.kiazenenterprises.org:8443/json/11.0b11M382q/JAHud" ~> 0.0.10
+binary "https://www.kiazenenterprises.org:8443/json/11.0b11M382q/Hydra" ~> 2.0.3

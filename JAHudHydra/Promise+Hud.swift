@@ -133,7 +133,7 @@ import Hydra
 
 public extension Hud {
 	
-	public static func asyncPresentWait(on parent: UIViewController,
+	static func asyncPresentWait(on parent: UIViewController,
 																			title: String? = nil,
 																			text: String? = nil,
 																			presentationStyle: PresentationStyle = .overCurrentContext,
@@ -150,7 +150,7 @@ public extension Hud {
 		})
 	}
 	
-	public static func asyncPresentProgress(on parent: UIViewController,
+	static func asyncPresentProgress(on parent: UIViewController,
 																					progress: Progress,
 																					title: String? = nil,
 																					text: String? = nil,
@@ -169,7 +169,7 @@ public extension Hud {
 		})
 	}
 	
-	public static func asyncPresentSuccess(on parent: UIViewController,
+	static func asyncPresentSuccess(on parent: UIViewController,
 																				 title: String? = nil,
 																				 text: String? = nil,
 																				 presentationStyle: PresentationStyle = .overCurrentContext,
@@ -186,7 +186,7 @@ public extension Hud {
 		})
 	}
 	
-	public static func asyncPresentFailure(on parent: UIViewController,
+	static func asyncPresentFailure(on parent: UIViewController,
 																				 title: String? = nil,
 																				 text: String? = nil,
 																				 presentationStyle: PresentationStyle = .overCurrentContext,
@@ -203,7 +203,7 @@ public extension Hud {
 		})
 	}
   
-  public static func asynDismiss(from parent: UIViewController) -> Promise<Void> {
+  static func asynDismiss(from parent: UIViewController) -> Promise<Void> {
     return Promise<Void>(in: .main, { (fulfill, fail, _) in
       Hud.dismiss(from: parent, then: {
         fulfill(())

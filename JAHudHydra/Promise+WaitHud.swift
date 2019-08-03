@@ -11,7 +11,7 @@ import Hydra
 import JAHud
 
 public extension Promise {
-	public static func presentWaitHud(on parent: UIViewController,
+	static func presentWaitHud(on parent: UIViewController,
 																		title: String? = nil,
 																		text: String? = nil,
 																		presentationStyle: Hud.PresentationStyle = .overCurrentContext,
